@@ -1,0 +1,139 @@
+{
+  "catalog": {
+    "version": "1.0.0",
+    "last_updated": "2026-03-08",
+    "total_products": 4
+  },
+  "products": [
+    {
+      "id": "PROD-001",
+      "name": "Wireless Noise-Cancelling Headphones",
+      "category": "electronics",
+      "brand": "SoundMax",
+      "sku": "SM-WNC-BLK",
+      "pricing": {
+        "base_price": 149.99,
+        "sale_price": null,
+        "cost_price": 62.00,
+        "currency": "USD"
+      },
+      "inventory": {
+        "stock": 120,
+        "reserved": 15,
+        "warehouse": "WH-EAST",
+        "reorder_level": 20,
+        "reorder_qty": 100
+      },
+      "attributes": {
+        "color": "Matte Black",
+        "connectivity": "Bluetooth 5.2",
+        "battery_life_hrs": 30,
+        "weight_grams": 250,
+        "noise_cancellation": true
+      },
+      "ratings": {
+        "average": 4.6,
+        "total_reviews": 348
+      },
+      "tags": ["wireless", "noise-cancelling", "premium"],
+      "active": true
+    },
+    {
+      "id": "PROD-002",
+      "name": "Classic Fit Oxford Shirt",
+      "category": "clothing",
+      "brand": "UrbanThread",
+      "sku": "UT-OXF-WHT-M",
+      "pricing": {
+        "base_price": 49.99,
+        "sale_price": 39.99,
+        "cost_price": 14.50,
+        "currency": "USD"
+      },
+      "inventory": {
+        "stock": 230,
+        "reserved": 8,
+        "warehouse": "WH-WEST",
+        "reorder_level": 50,
+        "reorder_qty": 200
+      },
+      "attributes": {
+        "color": "White",
+        "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+        "material": "100% Cotton",
+        "fit": "Classic"
+      },
+      "ratings": {
+        "average": 4.3,
+        "total_reviews": 195
+      },
+      "tags": ["formal", "casual", "cotton", "sale"],
+      "active": true
+    },
+    {
+      "id": "PROD-003",
+      "name": "Smart Fitness Tracker",
+      "category": "electronics",
+      "brand": "FitPulse",
+      "sku": "FP-TRK-BLU",
+      "pricing": {
+        "base_price": 89.99,
+        "sale_price": null,
+        "cost_price": 31.00,
+        "currency": "USD"
+      },
+      "inventory": {
+        "stock": 75,
+        "reserved": 22,
+        "warehouse": "WH-EAST",
+        "reorder_level": 25,
+        "reorder_qty": 75
+      },
+      "attributes": {
+        "color": "Ocean Blue",
+        "battery_life_days": 7,
+        "water_resistant": "5ATM",
+        "heart_rate_monitor": true,
+        "gps": false
+      },
+      "ratings": {
+        "average": 4.1,
+        "total_reviews": 512
+      },
+      "tags": ["fitness", "health", "wearable"],
+      "active": true
+    },
+    {
+      "id": "PROD-004",
+      "name": "USB-C 100W Fast Charger",
+      "category": "electronics",
+      "brand": "PowerEdge",
+      "sku": "PE-CHG-100W",
+      "pricing": {
+        "base_price": 34.99,
+        "sale_price": null,
+        "cost_price": 9.50,
+        "currency": "USD"
+      },
+      "inventory": {
+        "stock": 310,
+        "reserved": 40,
+        "warehouse": "WH-EAST",
+        "reorder_level": 80,
+        "reorder_qty": 300
+      },
+      "attributes": {
+        "wattage": 100,
+        "ports": 2,
+        "protocols": ["USB-PD 3.0", "Quick Charge 4+"],
+        "cable_included": false
+      },
+      "ratings": {
+        "average": 4.4,
+        "total_reviews": 724
+      },
+      "tags": ["charger", "fast-charging", "usb-c"],
+      "active": true
+    }
+  ]
+}

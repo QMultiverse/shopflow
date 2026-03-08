@@ -1,0 +1,56 @@
+{
+  "app": {
+    "name": "ShopFlow",
+    "version": "1.0.0",
+    "environment": "development",
+    "debug": true
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "shopflow_db",
+    "pool": {
+      "min_connections": 2,
+      "max_connections": 10,
+      "timeout": 30
+    }
+  },
+  "pricing": {
+    "currency": "USD",
+    "tax_rate": 0.08,
+    "discount_rules": {
+      "loyalty": {
+        "bronze":   { "min_purchases": 5,  "discount_pct": 0.05 },
+        "silver":   { "min_purchases": 15, "discount_pct": 0.10 },
+        "gold":     { "min_purchases": 30, "discount_pct": 0.15 },
+        "platinum": { "min_purchases": 50, "discount_pct": 0.20 }
+      },
+      "bulk": {
+        "enabled": true,
+        "tiers": [
+          { "min_qty": 10, "discount_pct": 0.05 },
+          { "min_qty": 25, "discount_pct": 0.10 },
+          { "min_qty": 50, "discount_pct": 0.18 }
+        ]
+      },
+      "seasonal": {
+        "enabled": false,
+        "black_friday": { "discount_pct": 0.25, "max_uses": 1000 },
+        "christmas":    { "discount_pct": 0.15, "max_uses": 500  }
+      }
+    }
+  },
+  "shipping": {
+    "free_shipping_threshold": 75.00,
+    "rates": {
+      "standard": { "cost": 5.99,  "days": 5 },
+      "express":  { "cost": 14.99, "days": 2 },
+      "overnight":{ "cost": 29.99, "days": 1 }
+    }
+  },
+  "feature_flags": {
+    "new_checkout_flow": false,
+    "ai_recommendations": false,
+    "guest_checkout": true
+  }
+}
