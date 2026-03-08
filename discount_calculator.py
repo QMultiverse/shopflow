@@ -127,13 +127,19 @@ class DiscountCalculator:
         seasonal_rules = self.discount_rules["seasonal"]
 
         if not seasonal_rules["enabled"]:
+            print("INFO: Seasonal promotions are currently disabled.")
             return 0.0
 
         if promo_key not in seasonal_rules:
-            print(f"WARNING: Unknown promotion '{promo_key}'.")
+            print(f"ERROR: Unknown promotion '{promo_key}'.")
+            print(f"Available: {[k for k in seasonal_rules if k != 'enabled']}")
             return 0.0
 
-        return seasonal_rules[promo_key]["discount_pct"]
+        promo    = seasonal_rules[promo_key]
+        discount = promo["discount_pct"]
+        max_uses = promo["max_uses"]
+        print(f"PROMO '{promo_key}': {discount * 100:.0f}% off (max {max_uses} uses).")
+        return discount
 
     # ------------------------------------------------------------------
     # Apply Discount & Tax
