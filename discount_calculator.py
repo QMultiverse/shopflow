@@ -45,7 +45,7 @@ class DiscountCalculator:
         tier = tier.lower()
 
         if tier not in loyalty_rules:
-            print(f"WARNING: Unknown loyalty tier '{tier}'. Defaulting to 0%.")
+            print(f"WARNING: '{tier}' not recognised. Assigning no discount.")
             return 0.0
 
         discount = loyalty_rules[tier]["discount_pct"]
