@@ -60,11 +60,17 @@
     }
   },
   "shipping": {
-    "free_shipping_threshold": 75.00,
+    "free_shipping_threshold": 120.00,
+    "default_provider": "fedex",
     "rates": {
-      "standard": { "cost": 5.99,  "days": 5 },
-      "express":  { "cost": 14.99, "days": 2 },
-      "overnight":{ "cost": 29.99, "days": 1 }
+        "standard": { "cost": 4.99,  "days": 5 },
+        "express":  { "cost": 12.99, "days": 2 },
+        "overnight":{ "cost": 24.99, "days": 1 }
+    },
+    "international": {
+        "enabled": true,
+        "cost": 29.99,
+        "days": 14
     }
   },
   "feature_flags": {
