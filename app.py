@@ -74,8 +74,9 @@ def calculate_order_total(product: dict, quantity: int,
     unit_price = sale_price if sale_price else base_price
 
     loyalty_discount = calculator.get_loyalty_discount(customer_tier)
-    bulk_discount    = calculator.get_bulk_discount(quantity)
-    best_discount    = max(loyalty_discount, bulk_discount)
+    bulk_discount = calculator.get_bulk_discount(quantity)
+    seasonal_discount = calculator.get_seasonal_discount("black_friday")
+    best_discount = max(loyalty_discount, bulk_discount, seasonal_discount)
 
     subtotal        = unit_price * quantity
     discount_amount = subtotal * best_discount
