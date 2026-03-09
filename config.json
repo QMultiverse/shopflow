@@ -17,31 +17,62 @@
   },
   "pricing": {
     "currency": "USD",
-    "tax_rate": 0.08,
+    "tax_rate": 0.09,
     "discount_rules": {
       "loyalty": {
-        "bronze":   { "min_purchases": 3,  "discount_pct": 0.08 },
-        "silver":   { "min_purchases": 12, "discount_pct": 0.12 },
-        "gold":     { "min_purchases": 25, "discount_pct": 0.18 },
-        "platinum": { "min_purchases": 45, "discount_pct": 0.25 }
+        "bronze": {
+          "min_purchases": 3,
+          "discount_pct": 0.10
+        },
+        "silver": {
+          "min_purchases": 12,
+          "discount_pct": 0.15
+        },
+        "gold": {
+          "min_purchases": 25,
+          "discount_pct": 0.20
+        },
+        "platinum": {
+          "min_purchases": 45,
+          "discount_pct": 0.28
+        }
       },
       "bulk": {
         "enabled": true,
         "tiers": [
-          { "min_qty": 10, "discount_pct": 0.05 },
-          { "min_qty": 25, "discount_pct": 0.10 },
-          { "min_qty": 50, "discount_pct": 0.18 }
+          {
+            "min_qty": 10,
+            "discount_pct": 0.05
+          },
+          {
+            "min_qty": 25,
+            "discount_pct": 0.10
+          },
+          {
+            "min_qty": 50,
+            "discount_pct": 0.18
+          }
         ]
       },
       "seasonal": {
-        "enabled": false,
-        "black_friday": { "discount_pct": 0.25, "max_uses": 1000 },
-        "christmas":    { "discount_pct": 0.15, "max_uses": 500  }
+        "enabled": true,
+        "black_friday": {
+          "discount_pct": 0.30,
+          "max_uses": 2000,
+          "start_date": "2026-11-28",
+          "end_date": "2026-11-29"
+        },
+        "christmas": {
+          "discount_pct": 0.20,
+          "max_uses": 1000,
+          "start_date": "2026-12-24",
+          "end_date": "2026-12-26"
+        }
       }
     }
   },
   "shipping": {
-    "free_shipping_threshold": 75.00,
+    "free_shipping_threshold": 100.00,
     "rates": {
       "standard": { "cost": 5.99,  "days": 5 },
       "express":  { "cost": 14.99, "days": 2 },
@@ -51,6 +82,10 @@
   "feature_flags": {
     "new_checkout_flow": false,
     "ai_recommendations": false,
-    "guest_checkout": true
+    "guest_checkout": true,
+    "low_stock_alerts": true,
+    "reorder_notifications": true,
+    "alert_email": "warehouse@shopflow.dev",
+    "alert_threshold_pct": 0.15
   }
 }
