@@ -12,17 +12,17 @@
       "brand": "SoundMax",
       "sku": "SM-WNC-BLK",
       "pricing": {
-        "base_price": 149.99,
-        "sale_price": null,
+        "base_price": 169.99,
+        "sale_price": 149.99,
         "cost_price": 62.00,
         "currency": "USD"
       },
       "inventory": {
-        "stock": 120,
+        "stock": 200,
         "reserved": 15,
         "warehouse": "WH-EAST",
-        "reorder_level": 20,
-        "reorder_qty": 100
+        "reorder_level": 25,
+        "reorder_qty": 150
       },
       "attributes": {
         "color": "Matte Black",
@@ -45,17 +45,17 @@
       "brand": "UrbanThread",
       "sku": "UT-OXF-WHT-M",
       "pricing": {
-        "base_price": 49.99,
-        "sale_price": 39.99,
+        "base_price": 59.99,
+        "sale_price": 49.99,
         "cost_price": 14.50,
         "currency": "USD"
       },
       "inventory": {
-        "stock": 230,
+        "stock": 300,
         "reserved": 8,
         "warehouse": "WH-WEST",
-        "reorder_level": 50,
-        "reorder_qty": 200
+        "reorder_level": 60,
+        "reorder_qty": 250
       },
       "attributes": {
         "color": "White",
