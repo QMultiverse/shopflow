@@ -51,6 +51,10 @@
   "feature_flags": {
     "new_checkout_flow": false,
     "ai_recommendations": false,
-    "guest_checkout": true
+    "guest_checkout": true,
+    "low_stock_alerts": true,
+    "reorder_notifications": true,
+    "alert_email": "warehouse@shopflow.dev",
+    "alert_threshold_pct": 0.15
   }
 }

@@ -100,22 +100,38 @@ class InventoryManager:
     # ------------------------------------------------------------------
 
     def get_low_stock_alerts(self) -> list:
-        """Return products at or below their reorder level."""
+        """
+        Return products at or below their reorder level.
+        Includes urgency level based on stock percentage.
+        """
         alerts = []
         for product_id, product in self.products.items():
             inv = product["inventory"]
-            if inv["stock"] <= inv["reorder_level"]:
+            available = inv["stock"] - inv["reserved"]
+
+            # Calculate how close to reorder level
+            stock_pct = available / inv["reorder_level"] if inv["reorder_level"] > 0 else 1
+
+            if available <= inv["reorder_level"]:
+                urgency = "CRITICAL" if stock_pct <= 0.5 else "WARNING"
                 alerts.append({
                     "product_id":    product_id,
                     "product_name":  product["name"],
-                    "current_stock": inv["stock"],
+                    "current_stock": available,
                     "reorder_level": inv["reorder_level"],
-                    "reorder_qty":   inv["reorder_qty"]
+                    "reorder_qty":   inv["reorder_qty"],
+                    "urgency":       urgency,
+                    "warehouse":     inv["warehouse"]
                 })
+
         if not alerts:
-            print("All products are above reorder levels.")
+            print("INFO: All products are above reorder levels.")
         else:
-            print(f"{len(alerts)} product(s) need restocking.")
+            critical = [a for a in alerts if a["urgency"] == "CRITICAL"]
+            warnings = [a for a in alerts if a["urgency"] == "WARNING"]
+            print(f"CRITICAL: {len(critical)} product(s) need immediate restock.")
+            print(f"WARNING:  {len(warnings)} product(s) approaching reorder level.")
+
         return alerts
 
     def get_inventory_report(self) -> dict:
