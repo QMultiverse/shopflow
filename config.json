@@ -17,24 +17,24 @@
   },
   "pricing": {
     "currency": "USD",
-    "tax_rate": 0.08,
+    "tax_rate": 0.09,
     "discount_rules": {
       "loyalty": {
         "bronze": {
           "min_purchases": 3,
-          "discount_pct": 0.08
+          "discount_pct": 0.10
         },
         "silver": {
           "min_purchases": 12,
-          "discount_pct": 0.12
+          "discount_pct": 0.15
         },
         "gold": {
           "min_purchases": 25,
-          "discount_pct": 0.18
+          "discount_pct": 0.20
         },
         "platinum": {
           "min_purchases": 45,
-          "discount_pct": 0.25
+          "discount_pct": 0.28
         }
       },
       "bulk": {
@@ -72,7 +72,7 @@
     }
   },
   "shipping": {
-    "free_shipping_threshold": 75.00,
+    "free_shipping_threshold": 100.00,
     "rates": {
       "standard": { "cost": 5.99,  "days": 5 },
       "express":  { "cost": 14.99, "days": 2 },
