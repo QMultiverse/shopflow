@@ -17,11 +17,11 @@
   },
   "pricing": {
     "currency": "USD",
-    "tax_rate": 0.08,
+    "tax_rate": 0.07,
     "discount_rules": {
       "loyalty": {
         "bronze":   { "min_purchases": 3,  "discount_pct": 0.08 },
-        "silver":   { "min_purchases": 12, "discount_pct": 0.12 },
+        "silver":   { "min_purchases": 12, "discount_pct": 0.13 },
         "gold":     { "min_purchases": 25, "discount_pct": 0.18 },
         "platinum": { "min_purchases": 45, "discount_pct": 0.25 }
       },
