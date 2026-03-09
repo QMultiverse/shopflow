@@ -12,13 +12,13 @@
       "brand": "SoundMax",
       "sku": "SM-WNC-BLK",
       "pricing": {
-        "base_price": 169.99,
-        "sale_price": 149.99,
+        "base_price": 159.99,
+        "sale_price": 139.99,
         "cost_price": 62.00,
         "currency": "USD"
       },
       "inventory": {
-        "stock": 200,
+        "stock": 150,
         "reserved": 15,
         "warehouse": "WH-EAST",
         "reorder_level": 25,
